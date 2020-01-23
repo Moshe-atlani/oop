@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace MailServer
 {
-    public class MailItem
+    public class MailItem//התוכן של פריט הדואר האחרונה 
     {
         private string receiver;
-        private string sender;
+        private string sender;//שם השולח
         private string content;
         private bool isRead;
 
@@ -30,6 +30,9 @@ namespace MailServer
         {
             return this.isRead;
         }
-
+        public string GetSender()//תחגיל ז
+        {
+            return sender;
+        }
     }
 }

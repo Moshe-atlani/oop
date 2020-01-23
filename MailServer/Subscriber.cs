@@ -28,17 +28,43 @@ namespace MailServer
         public int HowMuchRead()
         {
             // לספור כמה מיילים נקראו
+
             int counter = 0;
             LinkedListNode<MailItem> current = mails.First; // first node
-            while(current.Next != null)
+            while (current != null)
             {
-                if(current.Value.GetIsRead() == true)
+                if (current.Value.GetIsRead() == true)
                 {
+
+
                     counter++;
                 }
-                current = current.Next; 
+                current = current.Next;
             }
             return counter;
+        }
+
+        public MailItem LastMessageFrom(string sender)//תחגיל ז
+        {
+            int didnRead = numMails - HowMuchRead();
+            if (didnRead > 0)
+            {
+                for (int i = 0; i < didnRead; i++)
+                {
+                    if(mails.Last.Get)
+                }
+                return mails.Last();
+            }
+            while(mails != null)
+            {
+                if(mails.sender)
+            }
+            return null;
+        }
+
+        public string  GetName()
+        {
+            return name;
         }
 
     }
